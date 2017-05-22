@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 import SearchPage from './search/SearchPage';
+import ResultsPage from './results/ResultsPage';
 
 export default class App extends Component {
 	/** Gets fired when the route changes.
@@ -16,6 +17,7 @@ export default class App extends Component {
 			<div id="app">
 				<Router onChange={this.handleRoute}>
           <SearchPage path="/" />
+          <ResultsPage path="/search/:query" />
 				</Router>
 			</div>
 		);
