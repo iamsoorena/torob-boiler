@@ -1,5 +1,8 @@
 @import '~style/helpers';
 
+.searchpage{
+  direction: rtl;
+}
 .nothing {
   padding: 56px 20px;
   min-height: 100%;
@@ -16,4 +19,38 @@
 .input{
   margin: auto;
   width: 50%;
+  .searchform div {
+    vertical-align: middle;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    width: 100%;
+  }
+
+  .searchboxwrapper {
+    position: relative;
+  }
+
+  .searchbox {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .searchsubmit {
+    background-color: #ae1f27;
+    color: #fff;
+    padding-top: 2px;
+    min-width: 50px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    text-shadow: none;
+  }
+
 }
