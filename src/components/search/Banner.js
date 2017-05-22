@@ -5,9 +5,12 @@ export default class Banner extends Component {
   render() {
     return (
       <div class={style.banner}>
-        <img src={"../../assets/logo.svg"}/>
-        <p>ترب</p>
-        <p>موتور جستجوی هوشمند خرید</p>
+        <img class={style.logo} src={"../../assets/logo.svg"}/>
+        {/*<p class={style.torobtitle}>ترب</p>*/}
+        {/*<p class={style.torobsubtitle}>موتور جستجوی هوشمند خرید</p>*/}
+        <div class={style.torobtitle}>
+          ترب <span class={style.torobsubtitle}>موتور جستجوی هوشمند خرید</span>
+        </div>
       </div>
     );
   }
