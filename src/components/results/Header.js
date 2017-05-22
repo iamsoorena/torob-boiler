@@ -9,11 +9,16 @@ export default class Header extends Component {
     return (
       <div>
         <div class={style.headercontent}>
-          <TorobLogo />
-          <span class={style.torobtitle}>
+          <div class={style.logotitle}>
+            <TorobLogo />
+            <span class={style.torobtitle}>
             ترب
           </span>
-          <SearchInput />
+          </div>
+          <div class={style.searchinput}>
+            <SearchInput />
+          </div>
+
         </div>
       </div>
     );
