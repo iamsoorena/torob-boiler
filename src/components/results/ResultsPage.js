@@ -38,8 +38,6 @@ export default class ResultsPage extends Component {
           { this.state.cardsdata.map(card => (
             <Card carddata={card}/>
           )) }
-
-
         </div>
 
       </div>

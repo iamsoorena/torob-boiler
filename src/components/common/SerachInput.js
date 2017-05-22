@@ -1,13 +1,29 @@
 import {h, Component} from 'preact';
 import style from './style.less';
+import { route } from 'preact-router';
 
 export default class SearchInput extends Component {
+  constructor(){
+    super();
+    this.state = {value : ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    route(`/search/${this.state.value}`);
+    event.preventDefault();
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
   render() {
     return (
       <div class={style.input}>
-        <form role="search" method="get" id="searchform" class={style.searchform} action="#" _lpchecked="1">
+        <form  onSubmit={this.handleSubmit} class={style.searchform} action="#" _lpchecked="1">
           <div class={style.searchboxwrapper}>
-            <input class={style.searchbox} type="text" value="" name="s" placeholder="نام کالا را وارد کنید" id="s"/>
+            <input value={this.state.value} onChange={this.handleChange} class={style.searchbox} type="text" name="s" placeholder="نام کالا را وارد کنید" id="s"/>
             <input class={style.searchsubmit} type="submit" id="searchsubmit" value=""/>
           </div>
         </form>
