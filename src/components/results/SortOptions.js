@@ -7,10 +7,10 @@ export default class SortOptions extends Component {
     return (
       <div>
         <div id={style.sortrow}>
-          <a class={style.sortitem} href="?sort=popularity&amp;query=s&amp;category=">محبوب ترین</a>
-          <a class={style.sortitem} href="?sort=newest&amp;query=s&amp;category=">جدیدترین</a>
-          <a class={style.sortitem} href="?sort=price_asc&amp;query=s&amp;category=">کمترین قیمت</a>
-          <a class={style.sortitem} href="?sort=price_desc&amp;query=s&amp;category=">بیشترین قیمت</a>
+          <a class={style.sortitem}>محبوب ترین</a>
+          <a class={style.sortitem}>جدیدترین</a>
+          <a class={style.sortitem}>کمترین قیمت</a>
+          <a class={style.sortitem}>بیشترین قیمت</a>
         </div>
       </div>
     );

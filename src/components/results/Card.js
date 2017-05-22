@@ -10,7 +10,7 @@ export default class Card extends Component {
     let el = this.props.carddata;
     return (
       <div class={style.card}>
-        <a>
+        <a href={"http://torob.ir"+el.web_client_absolute_url}>
           <div>
             <img src={el.image_url} class={style.productimg}/>
           </div>
@@ -28,7 +28,12 @@ export default class Card extends Component {
               {priceFarsi(el.price)}
             </div>
             <div>
-              تعداد فروشگاه
+              {el.shop_num > 1 ?
+                (
+                  <span>در {digitsToFa(el.shop_num)} فروشگاه</span>
+                )
+                :(<span>در {el.shop_name}</span>)
+              }
             </div>
             <div>
               تخفیف
