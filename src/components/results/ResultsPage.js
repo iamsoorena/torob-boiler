@@ -24,11 +24,16 @@ export default class ResultsPage extends Component {
     this.askServer();
   }
 
+  changeSort = (sortoption) => {
+    this.setState({sort : sortoption});
+    this.askServer();
+  };
+
   render() {
     return (
       <div class={style.resultspage}>
         <Header />
-        <SortOptions />
+        <SortOptions changeSort={this.changeSort} />
         <div>
           { this.state.cardsdata.map(card => (
             <Card carddata={card}/>
