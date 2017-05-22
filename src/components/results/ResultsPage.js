@@ -34,10 +34,12 @@ export default class ResultsPage extends Component {
       <div class={style.resultspage}>
         <Header />
         <SortOptions changeSort={this.changeSort} />
-        <div>
-          { this.state.cardsdata.map(card => (
-            <Card carddata={card}/>
-          )) }
+        <div class={style.container}>
+          <div class={style.cards}>
+            { this.state.cardsdata.map(card => (
+              <Card class={style.card} carddata={card}/>
+            )) }
+          </div>
         </div>
 
       </div>
