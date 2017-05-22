@@ -19,14 +19,15 @@
   flex-flow: row;
 }
 .headercontent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
   @media (min-width: 768px) {
     flex-flow: row;
   }
   @media (max-width: 768px) {
     flex-flow: column;
   }
-  display: flex;
-  align-items: center;
   img {
     width: 50px;
     height: 50px;
@@ -62,3 +63,19 @@
   font: normal normal normal normal 14px / 33.6px Shabnam, Arial;
 }
 
+.card{
+  height: 370px;
+  width: 213.75px;
+  background-color: white;
+  margin-top: 10px;
+  padding-left: 5px;
+  position: relative;
+  .fav{
+    position:absolute;
+    left: 190px;
+    bottom: 300px;
+  }
+  .productimg{
+    min-height: 180px;
+  }
+}

@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import Header from './Header';
 import SortOptions from './SortOptions';
-import Cards from './Cards';
+import Card from './Card';
 import style from './style.less';
 
 export default class ResultsPage extends Component {
@@ -10,7 +10,7 @@ export default class ResultsPage extends Component {
       <div class={style.resultspage}>
         <Header />
         <SortOptions />
-        <Cards />
+        <Card />
       </div>
     );
   }

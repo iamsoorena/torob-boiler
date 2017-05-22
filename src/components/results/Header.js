@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import {h, Component} from 'preact';
 import TorobLogo from '../common/TorobLogo';
 import SearchInput from '../common/SerachInput';
 import style from './style.less';
@@ -13,12 +13,11 @@ export default class Header extends Component {
             <TorobLogo />
             <span class={style.torobtitle}>
             ترب
-          </span>
+            </span>
           </div>
           <div class={style.searchinput}>
             <SearchInput />
           </div>
-
         </div>
       </div>
     );
