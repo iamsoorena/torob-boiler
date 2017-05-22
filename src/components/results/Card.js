@@ -1,22 +1,24 @@
-import { h, Component } from 'preact';
+import {h, Component} from 'preact';
 import style from './style.less';
 
 
 export default class Card extends Component {
+
   render() {
+    let el = this.props.carddata;
     return (
       <div class={style.card}>
         <a>
           <div>
-            <img class={style.productimg}/>
+            <img src={el.image_url} class={style.productimg}/>
           </div>
           <div>
             <span>
-              نام
+              {this.props.carddata.slug_name}
             </span>
             <br/>
             <span>
-              name
+              {this.props.carddata.english_name}
             </span>
           </div>
           <div>
