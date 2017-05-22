@@ -1,5 +1,7 @@
 import {h, Component} from 'preact';
+import digitsToFa from '../common/digitsToFa';
 import style from './style.less';
+import priceFarsi from '../common/priceFarsi';
 
 
 export default class Card extends Component {
@@ -14,16 +16,16 @@ export default class Card extends Component {
           </div>
           <div>
             <span>
-              {this.props.carddata.slug_name}
+              {digitsToFa(el.slug_name)}
             </span>
             <br/>
             <span>
-              {this.props.carddata.english_name}
+              {el.english_name}
             </span>
           </div>
           <div>
             <div>
-              قیمت 1
+              {priceFarsi(el.price)}
             </div>
             <div>
               تعداد فروشگاه
