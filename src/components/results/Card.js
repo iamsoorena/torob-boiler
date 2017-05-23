@@ -34,14 +34,11 @@ export default class Card extends Component {
                 :(<span>در {el.shop_name}</span>)
               }
             </div>
-            <div class={style.discount}>
-              {typeof el.discount_info[0] !== 'undefined' ?
-                (
-                  <span>سلام</span>
-                )
-                :(<span>بر شما</span>)
-              }
-            </div>
+            {typeof el.discount_info[0] !== 'undefined' &&
+              <div class={style.discount}>
+                <span>سلام</span>
+              </div>
+            }
           </div>
         </a>
         <div class={style.fav}>
