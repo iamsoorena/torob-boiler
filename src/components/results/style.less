@@ -64,32 +64,6 @@
   font: normal normal normal normal 14px / 33.6px Shabnam, Arial;
 }
 
-.carditem {
-  height: 370px;
-  width: 213.75px;
-  background-color: white;
-  margin-top: 10px;
-  //padding-left: 5px;
-  position: relative;
-  .fav {
-    position: absolute;
-    left: 190px;
-    bottom: 300px;
-  }
-  .productimg {
-    max-height: 180px;
-  }
-  a {
-    text-decoration: none;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 9px 0px;
-    display: block;
-    padding: 15px 0;
-    min-height: 370px;
-    margin: 0;
-    width: 100%;
-  }
-}
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -104,19 +78,110 @@
   padding: 1.5%;
   box-sizing: border-box;
 }
-.card{
+
+.card {
   width: 25%;
-  @media (max-width:481px)  { width: 100%; }
-  @media (min-width:481px)  { width: 50%; }
-  @media (min-width:740px)  { width: 33%; }
-  @media (min-width:961px)  { width: 33%; }
-  @media (min-width:1025px) { width: 25%; }
-  @media (min-width:1281px) { width: 25%; }
-  display:flex;
+  @media (max-width: 481px) {
+    width: 100%;
+  }
+  @media (min-width: 481px) {
+    width: 50%;
+  }
+  @media (min-width: 740px) {
+    width: 33%;
+  }
+  @media (min-width: 961px) {
+    width: 33%;
+  }
+  @media (min-width: 1025px) {
+    width: 25%;
+  }
+  @media (min-width: 1281px) {
+    width: 25%;
+  }
+  display: flex;
   justify-content: center;
 }
-//.carditem{
-//  margin: 0 auto;
-//  align-items: center;
-//}
+
+.carditem {
+  height: 370px;
+  width: 213.75px;
+  background-color: white;
+  margin-top: 10px;
+  position: relative;
+  .fav {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    left: 185px;
+    bottom: 336px;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+    height: 24px;
+    font: normal normal normal normal 24px / 24px "Material Icons";
+    i {
+      margin-bottom: 10px;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 9px 0px;
+    padding: 15px 0;
+    min-height: 370px;
+    margin: 0;
+    div {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      .pricetag {
+        display: flex;
+        flex-flow: row;
+        color: rgb(235, 31, 51);
+        caret-color: rgb(235, 31, 51);
+        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
+      }
+      .shopnum {
+        color: rgb(128, 128, 128);
+        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
+      }
+    }
+    .imgwrapper {
+      margin-bottom: 20px;
+      width: 180px;
+      .productimg {
+        max-height: 180px;
+        max-width: 180px;
+      }
+    }
+    .titleswrapper {
+      height: 80px;
+      display: flex;
+      flex-flow: column;
+      .biggertitle {
+        margin: 10px 0px 5px 0px;
+        box-sizing: border-box;
+        direction: rtl;
+        color: #000;
+        max-height: 36.4px;
+        overflow-wrap: break-word;
+        text-align: center;
+        word-wrap: break-word;
+        font: normal normal 500 normal 14px / 18.2px Shabnam, Arial;
+        overflow: hidden;
+      }
+      .smallertitle {
+        color: rgb(150, 150, 150);
+        max-height: 26px;
+        text-align: center;
+        width: 179.375px;
+        font: normal normal 500 normal 12px / 13.2px Arial, Helvetica, sans-serif;
+        overflow: hidden;
+      }
+    }
+  }
+}
 
