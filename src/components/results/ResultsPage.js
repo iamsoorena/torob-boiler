@@ -6,24 +6,24 @@ import axios from 'axios';
 import style from './style.less';
 
 export default class ResultsPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.askServer();
     this.state = {
       sort : 'popularity',
       cardsdata: []
     }
   }
-  askServer() {
-    axios.get(`http://api.torob.com/android-api/3/search/?sort=${this.state.sort}&query=${this.props.query}&category=175`)
+  askServer(somequery) {
+    axios.get(`http://api.torob.com/android-api/3/search/?sort=${this.state.sort}&query=${somequery || this.props.query}&category=175`)
       .then(res => {
         const cardsdata = res.data.result;
         this.setState({ cardsdata });
       });
   }
-  componentDidMount() {
-    this.askServer();
+  componentWillReceiveProps(nextProps){
+    this.askServer(nextProps.query);
   }
-
   changeSort = (sortoption) => {
     this.setState({sort : sortoption});
     this.askServer();
@@ -44,7 +44,6 @@ export default class ResultsPage extends Component {
             )) }
           </div>
         </div>
-
       </div>
     );
   }
