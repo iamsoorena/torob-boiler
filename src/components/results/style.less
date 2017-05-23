@@ -8,19 +8,6 @@
   flex-flow: column;
 }
 
-.torobtitle {
-  color: rgb(229, 24, 55);
-  font: normal normal normal normal 40px / 57.1429px Shabnam, Arial;
-  margin-right: 10px;
-  padding-bottom: 5px;
-}
-
-.logotitle {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-}
-
 .headercontent {
   display: flex;
   align-items: center;
@@ -31,6 +18,7 @@
   @media (max-width: 768px) {
     flex-flow: column;
   }
+
   img {
     width: 50px;
     height: 50px;
@@ -38,11 +26,25 @@
       margin-right: 15px;
     }
   }
+
   .searchinput {
     @media (min-width: 768px) {
       width: 70%;
       max-width: 700px;
     }
+  }
+
+  .torobtitle {
+    color: rgb(229, 24, 55);
+    font: normal normal normal normal 40px / 57.1429px Shabnam, Arial;
+    margin-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .logotitle {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
   }
 }
 
@@ -53,55 +55,54 @@
   width: 100%;
   background: rgb(255, 255, 255);
   font: normal normal normal normal 14px / 20px Shabnam, Arial;
-}
-
-.sortitem {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: rgb(0, 0, 0);
-  text-decoration: none solid rgb(0, 0, 0);
-  width: 25%;
-  border-bottom: 4px solid rgb(174, 31, 39);
-  font: normal normal normal normal 14px / 33.6px Shabnam, Arial;
+  .sortitem {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(0, 0, 0);
+    text-decoration: none solid rgb(0, 0, 0);
+    width: 25%;
+    border-bottom: 4px solid rgb(174, 31, 39);
+    font: normal normal normal normal 14px / 33.6px Shabnam, Arial;
+  }
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-}
 
-.cards {
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  box-sizing: border-box;
-}
+  .cards {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    box-sizing: border-box;
+  }
 
-.card {
-  width: 25%;
-  @media (max-width: 481px) {
-    width: 100%;
-  }
-  @media (min-width: 481px) {
-    width: 50%;
-  }
-  @media (min-width: 740px) {
-    width: 33%;
-  }
-  @media (min-width: 961px) {
-    width: 33%;
-  }
-  @media (min-width: 1025px) {
+  .card {
     width: 25%;
+    @media (max-width: 481px) {
+      width: 100%;
+    }
+    @media (min-width: 481px) {
+      width: 50%;
+    }
+    @media (min-width: 740px) {
+      width: 33%;
+    }
+    @media (min-width: 961px) {
+      width: 33%;
+    }
+    @media (min-width: 1025px) {
+      width: 25%;
+    }
+    @media (min-width: 1281px) {
+      width: 25%;
+    }
+    display: flex;
+    justify-content: center;
   }
-  @media (min-width: 1281px) {
-    width: 25%;
-  }
-  display: flex;
-  justify-content: center;
 }
 
 .carditem {
@@ -140,36 +141,7 @@
       align-items: center;
 
     }
-    .prices {
-      font-size: 12px;
-      height: 70px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-flow: column;
-      align-items: center;
-      text-align: -webkit-center;
-      .pricetag {
-        display: flex;
-        flex-flow: row;
-        color: rgb(235, 31, 51);
-        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
-      }
-      .shopnum {
-        color: rgb(128, 128, 128);
-        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
-      }
-      .discount{
-        align-self: flex-end;
-        text-align: center;
-        background-color: #fbf5f5;
-        border: 1px solid #ae1f27;
-        color: #ae1f27;
-        min-height: 22px;
-        min-width: 132px;
-        line-height: 1.8em;
-        display: flex;
-      }
-    }
+
     .imgwrapper {
       margin-bottom: 20px;
       width: 180px;
@@ -203,6 +175,36 @@
         width: 179.375px;
         font: normal normal 500 normal 12px / 13.2px Arial, Helvetica, sans-serif;
         overflow: hidden;
+      }
+    }
+    .prices {
+      font-size: 12px;
+      height: 70px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-flow: column;
+      align-items: center;
+      text-align: -webkit-center;
+      .pricetag {
+        display: flex;
+        flex-flow: row;
+        color: rgb(235, 31, 51);
+        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
+      }
+      .shopnum {
+        color: rgb(128, 128, 128);
+        font: normal normal normal normal 12px / 17.1429px Shabnam, Arial;
+      }
+      .discount {
+        align-self: flex-end;
+        text-align: center;
+        background-color: #fbf5f5;
+        border: 1px solid #ae1f27;
+        color: #ae1f27;
+        min-height: 22px;
+        min-width: 132px;
+        line-height: 1.8em;
+        display: flex;
       }
     }
   }
