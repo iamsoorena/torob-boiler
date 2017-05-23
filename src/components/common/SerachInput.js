@@ -21,10 +21,11 @@ export default class SearchInput extends Component {
   render() {
     return (
       <div class={style.input}>
-        <form  onSubmit={this.handleSubmit} class={style.searchform} action="#" _lpchecked="1">
+        <form  onSubmit={this.handleSubmit} class={style.searchform} action="#">
           <div class={style.searchboxwrapper}>
             <input value={this.state.value} onChange={this.handleChange} class={style.searchbox} type="text" name="s" placeholder="نام کالا را وارد کنید" id="s"/>
-            <input class={style.searchsubmit} type="submit" id="searchsubmit" value=""/>
+            {/*<input class={style.searchsubmit} type="submit" id="searchsubmit" value=""/>*/}
+            <button class={style.searchsubmit} type="submit" id="searchsubmit" >search</button>
           </div>
         </form>
       </div>
