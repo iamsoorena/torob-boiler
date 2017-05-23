@@ -36,8 +36,11 @@ export default class ResultsPage extends Component {
         <SortOptions changeSort={this.changeSort} />
         <div class={style.container}>
           <div class={style.cards}>
+
             { this.state.cardsdata.map(card => (
-              <Card class={style.card} carddata={card}/>
+              <div class={style.card}>
+                <Card  carddata={card}/>
+              </div>
             )) }
           </div>
         </div>

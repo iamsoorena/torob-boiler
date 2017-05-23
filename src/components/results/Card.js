@@ -9,7 +9,7 @@ export default class Card extends Component {
   render() {
     let el = this.props.carddata;
     return (
-      <div class={style.card}>
+      <div class={style.carditem}>
         <a href={"http://torob.ir"+el.web_client_absolute_url}>
           <div>
             <img src={el.image_url} class={style.productimg}/>

@@ -64,7 +64,7 @@
   font: normal normal normal normal 14px / 33.6px Shabnam, Arial;
 }
 
-.card {
+.carditem {
   height: 370px;
   width: 213.75px;
   background-color: white;
@@ -96,15 +96,27 @@
 }
 
 .cards {
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 15px;
   padding: 1.5%;
   box-sizing: border-box;
 }
-
-
-
-
+.card{
+  width: 25%;
+  @media (max-width:481px)  { width: 100%; }
+  @media (min-width:481px)  { width: 50%; }
+  @media (min-width:740px)  { width: 33%; }
+  @media (min-width:961px)  { width: 33%; }
+  @media (min-width:1025px) { width: 25%; }
+  @media (min-width:1281px) { width: 25%; }
+  display:flex;
+  justify-content: center;
+}
+//.carditem{
+//  margin: 0 auto;
+//  align-items: center;
+//}
 
