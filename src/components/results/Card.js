@@ -22,7 +22,7 @@ export default class Card extends Component {
               {el.english_name}
             </span>
           </div>
-          <div>
+          <div class={style.prices}>
             <div class={style.pricetag}>
               <span> از  </span>{priceFarsi(el.price)}
             </div>
@@ -34,8 +34,13 @@ export default class Card extends Component {
                 :(<span>در {el.shop_name}</span>)
               }
             </div>
-            <div>
-              تخفیف
+            <div class={style.discount}>
+              {typeof el.discount_info[0] !== 'undefined' ?
+                (
+                  <span>سلام</span>
+                )
+                :(<span>بر شما</span>)
+              }
             </div>
           </div>
         </a>
